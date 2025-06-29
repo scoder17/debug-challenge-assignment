@@ -16,6 +16,30 @@ DATABASE_URL=sqlite:///./blood_test_analyzer.db
 ```sh
 python main.py
 ```
+### API Documentation
+http://localhost:8000/docs  
+(after executing the program)
+
+### Testing
+You can use **Postman** or **Thunder CLient in VSCode**. Set methods as per need, provide required URL and set body and then hit "Send".  
+
+**Example:**  
+Method: POST  
+URL: localhost:8000/analyze  
+Body->form-data
+
+|Key|Type|Value|
+|---|----|-----|
+file|File| sample.pdf
+query|Text| Analyze my blood test and give me health recommendations
+analysis_type|Text|comprehensive
+user_uuid|Text|Leave empty for anonymous user  
+
+You can set 'analysis_type' as: comprehensive, medical, nutrition, exercise, verification
+
+Sample output: https://gist.github.com/scoder17/ca7565967067dca38ec2a7913ef27b2c  
+
+
 
 # You're All ~Not~ Set!
 🐛 **Debug Mode ~Activated~ Deactivated!** The project ~has~ had bugs waiting to be squashed - your mission ~is~ was to fix them and bring it to life.
