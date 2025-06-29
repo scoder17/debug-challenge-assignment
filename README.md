@@ -6,6 +6,12 @@
 ```sh
 pip install -r requirement.txt
 ```
+### Add .env file
+```sh
+GEMINI_API_KEY=
+DATABASE_URL=sqlite:///./blood_test_analyzer.db
+```
+
 ### Run the server
 ```sh
 python main.py
@@ -116,3 +122,8 @@ Lots of packages were conflicting with each other |First I started with fixing e
 | `POST /analyze` | Uploads and analyzes blood report PDFs | ✔️ Now checks file type, securely saves uploads, runs full crew analysis, and returns clean structured output |
 
 ---
+
+# Bonus Points
+
+-  Database Integration: Add database for storing analysis results and user data  
+   Used SQLite using SQLAlchemy
