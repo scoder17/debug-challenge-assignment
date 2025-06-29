@@ -1,5 +1,11 @@
 # Project Setup and Execution Guide
 
+## Endpoint
+https://wingify-vwo-assignment.onrender.com/  
+This is deployed on render, so you can use it directly instead of installing and running the project. See **API Documentation** and **Testing** sections below for further information.
+
+(**Note:** Since it is deployed on render, thus, it might take some time to load, if endpoint has been inactive for long time.)
+
 ## Getting Started
 
 ### Install Required Libraries
@@ -17,6 +23,9 @@ DATABASE_URL=sqlite:///./blood_test_analyzer.db
 python main.py
 ```
 ### API Documentation
+
+https://wingify-vwo-assignment.onrender.com/docs  
+or  
 http://localhost:8000/docs  
 (after executing the program)
 
@@ -25,7 +34,7 @@ You can use **Postman** or **Thunder CLient in VSCode**. Set methods as per need
 
 **Example:**  
 Method: POST  
-URL: localhost:8000/analyze  
+URL: https://wingify-vwo-assignment.onrender.com/analyze or localhost:8000/analyze  
 Body->form-data
 
 |Key|Type|Value|
@@ -151,3 +160,9 @@ Lots of packages were conflicting with each other |First I started with fixing e
 
 -  Database Integration: Add database for storing analysis results and user data  
    Used SQLite using SQLAlchemy
+
+## Next Tasks in pipeline:
+- Implement Queue Worker Model: Upgrade system to handle concurrent requests (Redis Queue, Celery, etc.)
+- Put output in a new pdf using `reportlab` package
+- Implement PostgreSQL (optional)
+- Build a minimal frontend for same (optional)
